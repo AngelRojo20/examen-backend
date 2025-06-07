@@ -62,6 +62,15 @@ node ace serve --watch
 | POST   | /especialistas/\:id/restore | Restaurar especialista         |
 | DELETE | /especialistas/\:id/force   | Eliminar definitivamente       |
 
+## 📬 Colección de Postman
+
+Para facilitar las pruebas del backend, se incluye una colección de Postman con todas las rutas disponibles:
+
+- [Descargar colección Postman](./Miguel_examen.postman_collection.json)
+
+Importa este archivo en tu Postman local o desde [Postman Web](https://web.postman.co) para comenzar a probar las rutas de forma inmediata.
+
+
 # Autor:
 Miguel Angel Bohada Lopez - Ficha ADSO 2863722
 Instructor: ing. Giovanny Gonzalez

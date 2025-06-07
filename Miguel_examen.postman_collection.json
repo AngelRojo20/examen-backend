@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "0c52fc37-dde3-4b22-b580-094d72e30dbf",
+		"name": "Miguel_examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44795986",
+		"_collection_link": "https://losbasicos.postman.co/workspace/Los-basicos's-Workspace~38b35165-c176-4598-8f74-45387c593abd/collection/44795986-0c52fc37-dde3-4b22-b580-094d72e30dbf?action=share&source=collection_link&creator=44795986"
+	},
+	"item": [
+		{
+			"name": "Lista especialistas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/especialistas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"especialistas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar inactivos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/especialistas/inactivos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"especialistas",
+						"inactivos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar especialista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre_completo\": \"Dra. Carolina Ríos\",\n  \"especialidad\": \"Neurología\",\n  \"registro_profesional\": \"MED003\",\n  \"horarios\": [\n    {\n      \"dia\": \"Lunes\",\n      \"hora_inicio\": \"08:00\",\n      \"hora_fin\": \"12:00\"\n    },\n    {\n      \"dia\": \"Miércoles\",\n      \"hora_inicio\": \"14:00\",\n      \"hora_fin\": \"18:00\"\n    }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/especialistas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"especialistas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar especialista",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"horarios\": [\n    {\n      \"dia\": \"Viernes\",\n      \"hora_inicio\": \"09:00\",\n      \"hora_fin\": \"11:00\"\n    },\n    {\n      \"dia\": \"Viernes\",\n      \"hora_inicio\": \"10:30\",\n      \"hora_fin\": \"12:00\"\n    }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/especialistas/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"especialistas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inactivar especialista",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/especialistas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"especialistas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurar especialista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/especialistas/1/restore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"especialistas",
+						"1",
+						"restore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar permanente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/especialistas/2/force",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"especialistas",
+						"2",
+						"force"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
